@@ -1,11 +1,15 @@
-import { IsOptional, IsString } from "class-validator";
+import { IsOptional, IsString, IsDefined } from "class-validator";
 
 export class RegisterRequest {
     @IsString()
-    @IsOptional()
-    email?: string;
+    @IsDefined()
+    email: string;
 
     @IsString()
     @IsOptional()
     password?: string; 
+    
+    @IsString()
+    @IsOptional()
+    nickname?: string;
 }
