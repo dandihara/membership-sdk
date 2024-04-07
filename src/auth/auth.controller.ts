@@ -12,4 +12,8 @@ export class AuthController {
     async login (body: LoginRequest) {
         return await this.authSerivce.login(body);
     }
+
+    // Redirect 처리
+    @Post('google/auth')
+    async googleLogin() {}
 }

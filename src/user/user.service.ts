@@ -2,12 +2,12 @@ import { RegisterRequest } from "./dto/user.dto";
 
 export class UserService {
     constructor (
-        private userRepositoryService: UserRepositoryService,
+        // private userRepositoryService: UserRepositoryService,
     ){}
     async registerUser(params: RegisterRequest): Promise<void> {
-        const { email, password, nickname } = params;
+        const { email, password } = params;
 
-        await this.userRepositoryService.register(email, password, nickname);
+        // await this.userRepositoryService.register(email, password);
         return 
     }
 }

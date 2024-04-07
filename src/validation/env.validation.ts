@@ -11,9 +11,6 @@ class EnvironmentValues {
     @IsEnum(Enviorment)
     NODE_ENV: Enviorment;
 
-    // TODO : 추후, membership list 필요
-    @IsString()
-    MEMBERSHIP_NAME: string;
 }
 
 // run 혹은 build 시, 실행 인자 Validation
