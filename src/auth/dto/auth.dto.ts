@@ -1,20 +1,26 @@
-import { IsString, IsEnum,IsDefined, IsOptional, IsEmail } from 'class-validator';
+import {
+  IsString,
+  IsEnum,
+  IsDefined,
+  IsOptional,
+  IsEmail,
+} from 'class-validator';
 import { LoginType } from './auth.enum';
 
 export class LoginRequest {
-    @IsDefined()
-    @IsEmail()
-    email: string;
+  @IsDefined()
+  @IsEmail()
+  email: string;
 
-    @IsDefined()
-    @IsString()
-    password: string;
+  @IsDefined()
+  @IsString()
+  password: string;
 
-    @IsOptional()
-    @IsEnum(LoginType)
-    type?: LoginType;
+  @IsOptional()
+  @IsEnum(LoginType)
+  type?: LoginType;
 
-    @IsOptional()
-    @IsString()
-    token?: string;
+  @IsOptional()
+  @IsString()
+  token?: string;
 }
