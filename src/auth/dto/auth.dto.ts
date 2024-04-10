@@ -24,3 +24,17 @@ export class LoginRequest {
   @IsString()
   token?: string;
 }
+
+export class RegisterRequest {
+  @IsDefined()
+  @IsEmail()
+  email: string;
+
+  @IsDefined()
+  @IsString()
+  password: string;
+
+  @IsDefined()
+  @IsString()
+  nickname: string;
+}
